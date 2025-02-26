@@ -20,5 +20,7 @@ public interface EnquiryService {
 	public Enquiry getEnquiryById(Integer enqId);
 	
 	
+	
+	
 
 }
