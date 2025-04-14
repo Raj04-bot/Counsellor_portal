@@ -11,11 +11,11 @@ import com.counsellor.util.ViewEnqsFilterRequest;
 @Service
 public interface EnquiryService {
 	
-	public boolean addEnquiry(Enquiry enq, Integer counsellorId);
+	public boolean addEnquiry(Enquiry enq, Integer counsellorId) throws Exception;
 	
 	public List<Enquiry> getAllEnquiries(Integer counsellorId);
 	
-	public List<Enquiry> getEnquiries(ViewEnqsFilterRequest filterReq, Integer counsellorId);
+	public List<Enquiry>  getEnquiriesWithFilter(ViewEnqsFilterRequest filterReq, Integer counsellorId);
 	
 	public Enquiry getEnquiryById(Integer enqId);
 	
