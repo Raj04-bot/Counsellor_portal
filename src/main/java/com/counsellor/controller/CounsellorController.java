@@ -24,7 +24,7 @@ public class CounsellorController {
 		 this.counsellorService = counsellorService;
 	} 
 	 
-	@GetMapping
+	@GetMapping("/")
 	public String index(Model model)// model is used to map data from frontend to backend	
 	{
 		Counsellor counsellorObj = new Counsellor();
@@ -70,7 +70,7 @@ public class CounsellorController {
 	}
 	
 	
-	@PostMapping("/regisster")
+	@PostMapping("/register")
 	public String handleRegistration(Counsellor counsellor,Model model)
 	{
 		Counsellor byEmail = counsellorService.findByEmail(counsellor.getEmail());
@@ -91,7 +91,7 @@ public class CounsellorController {
 			model.addAttribute("errMsg","Registeration failed");
 		}
 		
-		return "resgister";
+		return "register";
 	}
 	
 	@GetMapping("/logout")
