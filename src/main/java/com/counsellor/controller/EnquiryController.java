@@ -31,6 +31,7 @@ public class EnquiryController {
 		// it is used for binding the forms from n=backend to frontend
 		model.addAttribute("enq", enqObj);
 		return "enquiryForm";
+		// committing the updates into git hub
 	}
 	
 	@PostMapping("/addEnq")
